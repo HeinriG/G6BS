@@ -1,14 +1,14 @@
 :root {
   --color-primary: #011343;
-  --color-secondary: #da8011;
-  --color-neutral: #f7f5f1;
+  --color-secondary: #002060;
+  --color-neutral: #ffffff;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-gold-dark: #c27210;
-  --color-gold-light: #fbd19e;
+  --color-blue-dark: #001986;
+  --color-blue-light: #2166fa;
   --font-color-primary: rgb(255, 255, 255);
-  --font-size-s: 1rem;
-  --font-size-m: 1.5rem;
+  --font-size-s: 1.5rem;
+  --font-size-m: 2.5rem;
   --font-size-l: 4rem;
   --font-size-xl: 7rem;
   --padding-xs: 0.2rem;
@@ -18,6 +18,7 @@
   --padding-xl: 8rem;
   --margin-xs: 0.2rem;
   --margin-s: 2rem;
+  --margin-base: 3rem;
   --margin-m: 4rem;
   --margin-l: 6rem;
   --margin-xl: 8rem;
@@ -32,6 +33,23 @@ body {
   padding: 0px;
 }
 
+.margin-top-s{
+  margin-top: var(--margin-s);
+}
+
+.margin-top-base{
+  margin-top: var(--margin-base);
+}
+
+.margin-top-m{
+  margin-top: var(--margin-m);
+}
+
+.margin-top-l{
+  margin-top: var(--margin-l);
+}
+
+
 body{
   font-family: "Ubuntu", sans-serif;
   text-align: center;
@@ -39,7 +57,7 @@ body{
 }
 
 body.home{
-  background-image: url("../images/long-grass-bg.png");
+  background-image: url("../images/main-background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -58,12 +76,61 @@ body.home{
 }
 
 .btn-custom:hover {
-  background-color: var(--color-gold-dark);
+  background-color: var(--color-blue-dark);
 }
 
 .btn:focus {
-  box-shadow: 0 0 0 0.2rem var(--color-gold-light);
+  box-shadow: 0 0 0 0.2rem var(--color-blue-light);
 }
+
+.section-title-primary {  
+  font-size: var(--font-size-m);
+  color: var(--color-secondary);
+  line-height: 1;  
+}
+
+.section-background-primary {
+  background-color: var(--color-neutral);
+  padding: var(--padding-l) 0;
+}
+
+.section-background-primary hr {
+  border-color: var(--color-secondary);
+  width: 200px;
+  border-width: 3px;
+}
+
+.section-background-primary p {
+  font-size: var(--font-size-s);
+ }
+
+ .section-title-secondary {  
+  font-size: var(--font-size-m);
+  color: var(--color-neutral);
+  line-height: 1;  
+}
+
+ .section-background-secondary {
+  background-color: var(--color-secondary);
+  padding: var(--padding-l) 0;
+  color: var(--color-neutral);
+}
+
+.section-background-secondary hr {
+  border-color: var(--color-neutral);
+  width: 200px;
+  border-width: 3px;
+}
+
+.section-background-secondary p {
+  font-size: var(--font-size-s);  
+ }
+
+ .section-tile-secondary {
+    background-color: var(--color-neutral);
+    color: var(--color-secondary);
+    margin: var(--margin-m);
+ }
 
 /* Navbar */
 
@@ -88,14 +155,14 @@ body.home{
   margin: 15rem 0;
 }
 
-.intro-text-title {
-  font-family: var(--font-cursive);
-  font-size: var(--font-size-xl);
+.intro-text-title {  
+  font-size: var(--font-size-l);
   line-height: 1;
 }
 .intro-text-subtitle {
   font-size: var(--font-size-m);
   font-weight: bold;
+  margin-top: var(--margin-m);
 }
 
 /* Info summary section */
